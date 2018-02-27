@@ -7,7 +7,7 @@ sudo apt install curl
 # using curl to download 
 curl https://nodejs.org/dist/$NODE_VERSION/node-$NODE_VERSION.tar.gz --output /tmp/node.tar.gz
 # unzip
-tar -zxvf /tmp/node.tar.gz
+tar -zxvf /tmp/node.tar.gz -C /tmp
 
 cd /tmp/node-$NODE_VERSION
 
