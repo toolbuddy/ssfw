@@ -16,6 +16,26 @@ All you need is a clean environment, which have `git`, `curl`, `wget`, and then 
 source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/install_nodejs.sh)
 ```
 
+### Environment
+
+#### Vim
+
+* spf13-vim
+```bash
+curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
+```
+
+#### Oh-my-zsh 
+
+* use command:
+```sh
+# via curl
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# via wget
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+```
+
 ## Author
 
 * [Kevin Cyu](), kevinbird61@gmail.com
