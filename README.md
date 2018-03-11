@@ -36,6 +36,18 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
 
+### P4 Environment Setup
+
+* use command:
+```bash
+# first install the dependencies
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/root_bootstrap.sh)
+
+# second install the library and usage
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/user_bootstrap.sh)
+
+```
+
 ## Author
 
 * [Kevin Cyu](), kevinbird61@gmail.com
