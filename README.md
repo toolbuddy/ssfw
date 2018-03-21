@@ -1,6 +1,17 @@
 # ssfw
 SSFW - Setup scripts For your Workspace. Using curl/wgets to install and use!
 
+- [ssfw](#ssfw)
+    - [Description](#description)
+    - [Usage](#usage)
+        - [Node.js installation](#nodejs-installation)
+        - [Docker installation](#docker-installation)
+        - [Environment](#environment)
+            - [Vim](#vim)
+            - [Oh-my-zsh](#oh-my-zsh)
+        - [P4 Environment Setup](#p4-environment-setup)
+    - [Author](#author)
+
 ## Description
 
 Sometime we need to reset a clean workspace (like setup up your new computer workspace, or your workstation in your office or lab), and here provide some useful tools and library installation scripts, pick up the library you want, and use it directly!
@@ -14,6 +25,13 @@ All you need is a clean environment, which have `git`, `curl`, `wget`, and then 
 * use command:
 ```bash
 source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/install_nodejs.sh)
+```
+
+### Docker installation
+
+* use command:
+```bash
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/install_docker.sh)
 ```
 
 ### Environment
