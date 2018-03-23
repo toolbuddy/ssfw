@@ -66,6 +66,9 @@ source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/user_bo
 
 ```
 
+> Notice: 
+> For some environment (like `docker`), you can just clone this repository and execute the `*_alter.sh` for installation directly.
+
 ## Author
 
 * [Kevin Cyu](), kevinbird61@gmail.com
