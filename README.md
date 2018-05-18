@@ -7,6 +7,7 @@ SSFW - Setup scripts For your Workspace. Using curl/wgets to install and use!
         - [Node.js installation](#nodejs-installation)
         - [Docker installation](#docker-installation)
         - [Environment](#environment)
+            - [TMUX](#tmux)
             - [Vim](#vim)
             - [Oh-my-zsh](#oh-my-zsh)
         - [P4 Environment Setup](#p4-environment-setup)
@@ -35,6 +36,14 @@ source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/install
 ```
 
 ### Environment
+
+#### TMUX
+
+* Installing my tmux configuration via `curl`: 
+    * You can check out more detail in [*tmux_setting.conf*](tmux_setting.conf)
+    ```bash
+    curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/tmux_setting.conf > ~/.tmux.conf
+    ```
 
 #### Vim
 

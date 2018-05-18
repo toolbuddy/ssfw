@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NODE_VERSION="v9.6.1"
+NODE_VERSION="v10.1.0"
 
 # install dependencies
 sudo apt install curl
