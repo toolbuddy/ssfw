@@ -13,7 +13,7 @@ sudo apt-get install -y --no-install-recommends \
   git \
   libboost-dev \
   libboost-filesystem-dev \
-  libboost-iostreams1.58-dev \
+  libboost-iostreams-dev \
   libboost-program-options-dev \
   libboost-system-dev \
   libboost-test-dev \
@@ -30,13 +30,11 @@ sudo apt-get install -y --no-install-recommends \
   libgmpxx4ldbl \
   libjudy-dev \
   libpcap-dev \
-  libreadline6 \
-  libreadline6-dev \
+  libreadline-dev \
   libssl-dev \
   libtool \
   linux-headers-$KERNEL\
   make \
-  mktemp \
   pkg-config \
   python \
   python-dev \
