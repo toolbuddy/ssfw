@@ -11,7 +11,7 @@ SSFW - Setup scripts For your Workspace. Using curl/wgets to install and use!
             - [Vim](#vim)
             - [Oh-my-zsh](#oh-my-zsh)
         - [P4 Environment Setup](#p4-environment-setup)
-        - [ONOS installation](#onos-installation)
+        - [ONOS Installation](#onos-installation)
     - [Author](#author)
 
 ## Description
@@ -66,13 +66,16 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 
 ### P4 Environment Setup
 
+> Currently version can run on `ubuntu 16.04`.
+> Updated at 2018/6/6.
+
 * use command:
 ```bash
 # first install the dependencies
-source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/root_bootstrap.sh)
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/p4/root_bootstrap.sh)
 
 # second install the library and usage
-source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/user_bootstrap.sh)
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/p4/user_bootstrap.sh)
 
 ```
 
