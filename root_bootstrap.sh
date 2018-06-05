@@ -35,6 +35,7 @@ sudo apt-get install -y --no-install-recommends \
   libtool \
   linux-headers-$KERNEL\
   make \
+  mktemp \
   pkg-config \
   python \
   python-dev \
