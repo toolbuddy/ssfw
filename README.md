@@ -11,6 +11,7 @@ SSFW - Setup scripts For your Workspace. Using curl/wgets to install and use!
             - [Vim](#vim)
             - [Oh-my-zsh](#oh-my-zsh)
         - [P4 Environment Setup](#p4-environment-setup)
+        - [ONOS installation](#onos-installation)
     - [Author](#author)
 
 ## Description
