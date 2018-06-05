@@ -78,6 +78,24 @@ source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/user_bo
 > Notice: 
 > For some environment (like `docker`), you can just clone this repository and execute the `*_alter.sh` for installation directly.
 
+### ONOS Installation
+
+* use command:
+
+```bash
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/install_onos.sh)
+
+```
+
+* run the onos server (if you have onos already)
+```bash
+# clone the ssfw first, and then use the `install_onos.sh`
+...
+# run the script 
+./install_onos.sh run
+```
+
+
 ## Author
 
 * [Kevin Cyu](), kevinbird61@gmail.com
