@@ -5,9 +5,9 @@ set -x
 # Exit on errors.
 set -e
 
-BMV2_COMMIT="39abe290b4143e829b8f983965fcdc711e3c450c"
-PI_COMMIT="afd5831393824228246ea01b26da2f93d38fd20c"
-P4C_COMMIT="80f8970b5ec8e57c4a3611da343461b5b0a8dda3"
+BMV2_COMMIT="7e25eeb19d01eee1a8e982dc7ee90ee438c10a05"
+PI_COMMIT="219b3d67299ec09b49f433d7341049256ab5f512"
+P4C_COMMIT="48a57a6ae4f96961b74bd13f6bdeac5add7bb815"
 PROTOBUF_COMMIT="v3.2.0"
 GRPC_COMMIT="v1.3.2"
 
@@ -31,8 +31,11 @@ export LDFLAGS="-Wl,-s"
 make -j${NUM_CORES}
 sudo make install
 sudo ldconfig
-unset CFLAGS CXXFLAGS LDFLAGS
-cd ..
+unset CFLAGS CXXFLAGS LDFLAGSi
+# force install python module
+cd python 
+sudo python setup.py install
+cd ../..
 
 # gRPC
 git clone https://github.com/grpc/grpc.git
