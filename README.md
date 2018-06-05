@@ -90,10 +90,8 @@ source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/install
 
 * run the onos server (if you have onos already)
 ```bash
-# clone the ssfw first, and then use the `install_onos.sh`
-...
-# run the script 
-./install_onos.sh run
+cd $ONOS_ROOT
+$ONOS_ROOT/tools/build/onos-buck run onos-local -- clean debug
 ```
 
 

@@ -32,10 +32,9 @@ $ONOS_ROOT/tools/build/onos-buck test
 # export ONOS root
 source $ONOS_ROOT/tools/dev/bash_profile
 
-# run up ONOS server 
-function run(){
-	# go to ONOS
-	cd $ONOS_ROOT
-	# run up server 
-	$ONOS_ROOT/tools/build/onos-buck run onos-local -- clean debug
-}
+# Append into bashrc
+echo "export JAVA_HOME=\"/usr/lib/jvm/java-8-oracle\"" >> ~/.bashrc
+echo "export ONOS_ROOT=~/onos" >> ~/.bashrc
+
+# source your bashrc
+source $ONOS_ROOT/tools/dev/bash_profile
