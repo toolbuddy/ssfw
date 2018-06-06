@@ -3,7 +3,7 @@
 NODE_VERSION="v10.1.0"
 
 # install dependencies
-sudo apt install curl
+sudo apt install -y curl build-essential
 # using curl to download 
 curl https://nodejs.org/dist/$NODE_VERSION/node-$NODE_VERSION.tar.gz --output /tmp/node.tar.gz
 # unzip

@@ -1,5 +1,6 @@
 # ssfw
 SSFW - Setup scripts For your Workspace. Using curl/wgets to install and use!
+<!-- TOC -->
 
 - [ssfw](#ssfw)
     - [Description](#description)
@@ -7,12 +8,17 @@ SSFW - Setup scripts For your Workspace. Using curl/wgets to install and use!
         - [Node.js installation](#nodejs-installation)
         - [Docker installation](#docker-installation)
         - [Environment](#environment)
+            - [Powerline](#powerline)
             - [TMUX](#tmux)
             - [Vim](#vim)
             - [Oh-my-zsh](#oh-my-zsh)
         - [P4 Environment Setup](#p4-environment-setup)
         - [ONOS Installation](#onos-installation)
+        - [Git-related](#git-related)
+            - [Update all repo (under current folder/workspace)](#update-all-repo-under-current-folderworkspace)
     - [Author](#author)
+
+<!-- /TOC -->
 
 ## Description
 
@@ -24,26 +30,67 @@ All you need is a clean environment, which have `git`, `curl`, `wget`, and then 
 
 ### Node.js installation
 
-* use command:
+* (**Build from source**)use command:
 ```bash
-source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/install_nodejs.sh)
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/nodejs/build_nodejs.sh)
+```
+
+* (**Install by package manager, Debian/Ubuntu**) use command:
+```bash
+# v10.x
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/nodejs/install_nodejs_10.sh)
+
+# v8.x
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/nodejs/install_nodejs_8.sh)
 ```
 
 ### Docker installation
 
 * use command:
 ```bash
-source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/install_docker.sh)
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/system/install_docker.sh)
 ```
 
 ### Environment
 
+#### Powerline 
+
+* install 
+```bash
+sudo apt install powerline
+```
+
+* Insert the script into `~/.bashrc`:
+```bash
+POWERLINE_SCRIPT=/usr/share/powerline/bindings/bash/powerline.sh
+if [ -f $POWERLINE_SCRIPT ]; then
+  source $POWERLINE_SCRIPT
+fi
+```
+
+or run 
+
+```bash
+curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/config/powerline.conf > ~/.bashrc
+```
+
+* install fonts for powerline
+```
+sudo apt-get install fonts-powerline
+```
+
+or use the building command directly:
+
+```bash
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/config/powerline-fonts.sh)
+```
+
 #### TMUX
 
 * Installing my tmux configuration via `curl`: 
-    * You can check out more detail in [*tmux_setting.conf*](tmux_setting.conf)
+    * You can check out more detail in [*tmux_setting.conf*](config/tmux_setting.conf)
     ```bash
-    curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/tmux_setting.conf > ~/.tmux.conf
+    curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/config/tmux_setting.conf > ~/.tmux.conf
     ```
 
 #### Vim
@@ -72,22 +119,19 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 * use command:
 ```bash
 # first install the dependencies
-source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/p4/root_bootstrap.sh)
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/netdev/root_bootstrap.sh)
 
 # second install the library and usage
-source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/p4/user_bootstrap.sh)
-
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/netdev/user_bootstrap.sh)
 ```
 
-> Notice: 
-> For some environment (like `docker`), you can just clone this repository and execute the `*_alter.sh` for installation directly.
 
 ### ONOS Installation
 
 * use command:
 
 ```bash
-source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/install_onos.sh)
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/netdev/install_onos.sh)
 
 ```
 
@@ -97,6 +141,13 @@ cd $ONOS_ROOT
 $ONOS_ROOT/tools/build/onos-buck run onos-local -- clean debug
 ```
 
+### Git-related
+
+#### Update all repo (under current folder/workspace)
+
+```bash
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/git/update_all_repo.sh)
+```
 
 ## Author
 
