@@ -111,3 +111,6 @@ sudo make install
 sudo ldconfig
 cd ..
 cd ..
+
+# Tutorial
+sudo pip install crcmod
