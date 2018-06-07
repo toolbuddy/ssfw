@@ -5,15 +5,21 @@ SSFW - Setup scripts For your Workspace. Using curl/wgets to install and use!
 - [ssfw](#ssfw)
     - [Description](#description)
     - [Usage](#usage)
+        - [Qt Installation](#qt-installation)
         - [Node.js installation](#nodejs-installation)
         - [Docker installation](#docker-installation)
+        - [P4 Environment Setup](#p4-environment-setup)
+        - [ONOS Installation](#onos-installation)
         - [Environment](#environment)
             - [Powerline](#powerline)
             - [TMUX](#tmux)
             - [Vim](#vim)
             - [Oh-my-zsh](#oh-my-zsh)
-        - [P4 Environment Setup](#p4-environment-setup)
-        - [ONOS Installation](#onos-installation)
+            - [Basic develop environment](#basic-develop-environment)
+            - [UNetbootin](#unetbootin)
+        - [Freebsd](#freebsd)
+        - [Database](#database)
+            - [MongoDB installation](#mongodb-installation)
         - [Git-related](#git-related)
             - [Update all repo (under current folder/workspace)](#update-all-repo-under-current-folderworkspace)
     - [Author](#author)
@@ -27,6 +33,19 @@ Sometime we need to reset a clean workspace (like setup up your new computer wor
 All you need is a clean environment, which have `git`, `curl`, `wget`, and then just use the command provided by the **target** under *Usage*!
 
 ## Usage 
+
+### Qt Installation
+
+* currently use `v5.11.0` to build
+* use command 
+
+```bash
+# dependencies
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/qt/deps.sh)
+
+# build from source
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/qt/build.sh)
+```
 
 ### Node.js installation
 
@@ -49,6 +68,36 @@ source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/nodejs/
 * use command:
 ```bash
 source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/system/install_docker.sh)
+```
+
+### P4 Environment Setup
+
+> Currently version can run on `ubuntu 16.04`.
+> Updated at 2018/6/6.
+
+* use command:
+```bash
+# first install the dependencies
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/netdev/root_bootstrap.sh)
+
+# second install the library and usage
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/netdev/user_bootstrap.sh)
+```
+
+
+### ONOS Installation
+
+* use command:
+
+```bash
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/netdev/install_onos.sh)
+
+```
+
+* run the onos server (if you have onos already)
+```bash
+cd $ONOS_ROOT
+$ONOS_ROOT/tools/build/onos-buck run onos-local -- clean debug
 ```
 
 ### Environment
@@ -111,34 +160,39 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
 
-### P4 Environment Setup
+#### Basic develop environment
 
-> Currently version can run on `ubuntu 16.04`.
-> Updated at 2018/6/6.
+* use command: 
+```bash
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/system/basic_env.sh)
+```
+
+#### UNetbootin
 
 * use command:
 ```bash
-# first install the dependencies
-source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/netdev/root_bootstrap.sh)
-
-# second install the library and usage
-source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/netdev/user_bootstrap.sh)
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/system/install_unetbootin.sh)
 ```
 
+### Freebsd
 
-### ONOS Installation
-
-* use command:
-
+* setup:
 ```bash
-source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/netdev/install_onos.sh)
-
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/freebsd/setup.sh)
 ```
 
-* run the onos server (if you have onos already)
+* software update:
 ```bash
-cd $ONOS_ROOT
-$ONOS_ROOT/tools/build/onos-buck run onos-local -- clean debug
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/freebsd/software_update.sh)
+```
+
+### Database 
+
+#### MongoDB installation
+
+* use command 
+```bash
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/system/install_mongo.sh)
 ```
 
 ### Git-related
