@@ -7,6 +7,7 @@ SSFW - Setup scripts For your Workspace. Using curl/wgets to install and use!
     - [Usage](#usage)
         - [Qt Installation](#qt-installation)
         - [Node.js installation](#nodejs-installation)
+        - [Go installation](#go-installation)
         - [Docker installation](#docker-installation)
         - [P4 Environment Setup](#p4-environment-setup)
         - [ONOS Installation](#onos-installation)
@@ -61,6 +62,13 @@ source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/nodejs/
 
 # v8.x
 source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/nodejs/install_nodejs_8.sh)
+```
+
+### Go installation
+
+* use command:
+```sh
+source <(curl -s https://raw.githubusercontent.com/toolbuddy/ssfw/master/go/install.sh)
 ```
 
 ### Docker installation
