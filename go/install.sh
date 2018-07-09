@@ -6,7 +6,7 @@ OS=linux
 ARCH=amd64
 
 # Get source
-wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz -P /tmp/go$VERSION.$OS-$ARCH.tar.gz
+wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz -P /tmp
 
 # using tar cmd to extract
 sudo tar -C /usr/local -xzf /tmp/go$VERSION.$OS-$ARCH.tar.gz
