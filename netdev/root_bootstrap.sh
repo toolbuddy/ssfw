@@ -35,7 +35,6 @@ sudo apt-get install -y --no-install-recommends \
   libtool \
   linux-headers-$KERNEL\
   make \
-  mktemp \
   pkg-config \
   python \
   python-dev \
@@ -43,7 +42,7 @@ sudo apt-get install -y --no-install-recommends \
   python-pip \
   python-scapy \
   python-setuptools \
-  tcpdump \
+  tcpdump tmux \
   unzip \
   vim \
   wget \
