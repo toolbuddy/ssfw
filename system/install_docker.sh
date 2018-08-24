@@ -5,3 +5,11 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt update
 apt-cache policy docker-ce
 sudo apt install -y docker-ce
+
+# add user into docker group
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
+echo "---------------"
+echo "Need to reboot to re-activated the user privilege!"
+echo "---------------"
